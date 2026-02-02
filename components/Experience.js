@@ -256,7 +256,7 @@ export default function Experience() {
                     activeProject === index && (
                       <div key={index}>
                         {/* Project Header */}
-                        <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 border border-gray-100 dark:border-gray-800 mb-8">
+                        <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 sm:p-8 border border-gray-100 dark:border-gray-800 mb-8">
                           <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-6 mb-8">
                             <div>
                               <div className="flex items-center gap-3 mb-2">
@@ -308,7 +308,7 @@ export default function Experience() {
                             <h4 className="font-bold text-lg mb-3 text-gray-700 dark:text-gray-300">
                               Technologies Used
                             </h4>
-                            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                               {project.technologies.map((tech, idx) => (
                                 <div
                                   key={idx}
@@ -327,7 +327,7 @@ export default function Experience() {
                         {/* Responsibilities & Achievements */}
                         <div className="grid md:grid-cols-2 gap-8">
                           {/* Responsibilities */}
-                          <div className="bg-gradient-to-br from-primary-50/50 to-white dark:from-primary-900/10 dark:to-gray-800 rounded-3xl p-8 border border-primary-100 dark:border-primary-800">
+                          <div className="bg-gradient-to-br from-primary-50/50 to-white dark:from-primary-900/10 dark:to-gray-800 rounded-3xl p-6 sm:p-8 border border-primary-100 dark:border-primary-800">
                             <h4 className="font-bold text-xl mb-6 flex items-center gap-2">
                               <Code className="text-primary-600 dark:text-primary-400" />
                               Key Responsibilities
@@ -349,7 +349,7 @@ export default function Experience() {
                           </div>
 
                           {/* Achievements */}
-                          <div className="bg-gradient-to-br from-purple-50/50 to-white dark:from-purple-900/10 dark:to-gray-800 rounded-3xl p-8 border border-purple-100 dark:border-purple-800">
+                          <div className="bg-gradient-to-br from-purple-50/50 to-white dark:from-purple-900/10 dark:to-gray-800 rounded-3xl p-6 sm:p-8 border border-purple-100 dark:border-purple-800">
                             <h4 className="font-bold text-xl mb-6 flex items-center gap-2">
                               <Shield className="text-purple-600 dark:text-purple-400" />
                               Key Achievements

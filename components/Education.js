@@ -12,12 +12,12 @@ export default function Education() {
 
   const education = [
     {
-      degree: 'B.Tech in Computer Science',
-      institution: 'Maharaja Institute of Technology (BPUT)',
+      degree: 'Diploma in Electrical Engineering',
+      institution: 'MITS School of Engineering (SCTE & VT)',
       location: 'Bhubaneswar, Odisha',
-      score: 'CGPA 7.67',
-      year: '2017 - 2021',
-      duration: '4 Years',
+      score: '67.63',
+      year: '2017',
+      duration: '2 Years',
       icon: GraduationCap,
       color: 'from-blue-500 to-cyan-500',
       achievements: [
@@ -31,8 +31,8 @@ export default function Education() {
       degree: 'Class 12th (Science Stream)',
       institution: 'Shri Jagannath Junior College',
       location: 'Khurdha, Odisha',
-      score: '61%',
-      year: '2015 - 2017',
+      score: '53.1%',
+      year: '2013',
       duration: '2 Years',
       icon: BookOpen,
       color: 'from-purple-500 to-pink-500',
@@ -47,8 +47,8 @@ export default function Education() {
       degree: 'Class 10th',
       institution: 'Rautapada High School',
       location: 'Khurdha, Odisha',
-      score: '65%',
-      year: '2014 - 2015',
+      score: '70%',
+      year: '2011',
       duration: '1 Year',
       icon: Award,
       color: 'from-green-500 to-emerald-500',
@@ -63,23 +63,23 @@ export default function Education() {
 
   const certifications = [
     {
-      title: 'C# Programming Fundamentals',
-      issuer: 'Microsoft Learning',
-      year: '2022',
+      title: 'Web Development Fundamentals',
+      issuer: 'Great Learning',
+      year: '2021',
       icon: Target,
       color: 'bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300',
     },
     {
       title: 'React Development',
       issuer: 'Online Course',
-      year: '2021',
+      year: '2022',
       icon: Star,
       color: 'bg-cyan-100 dark:bg-cyan-900/30 text-cyan-800 dark:text-cyan-300',
     },
     {
       title: 'AWS Basics',
       issuer: 'AWS Training',
-      year: '2023',
+      year: '2022',
       icon: Trophy,
       color: 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300',
     },
@@ -156,7 +156,7 @@ export default function Education() {
                   >
                     <motion.div
                       whileHover={{ scale: 1.02 }}
-                      className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 border border-gray-100 dark:border-gray-800 card-hover"
+                      className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 sm:p-8 border border-gray-100 dark:border-gray-800 card-hover"
                     >
                       <div className="flex items-start gap-4 mb-6">
                         <div className={`p-3 rounded-xl bg-gradient-to-r ${edu.color} bg-opacity-10`}>
@@ -180,7 +180,7 @@ export default function Education() {
                       </div>
 
                       {/* Score & Duration */}
-                      <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                         <div className="p-4 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 rounded-xl">
                           <div className="text-2xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
                             {edu.score}
@@ -238,7 +238,7 @@ export default function Education() {
               <h3 className="text-2xl font-bold mb-8 text-center">
                 <span className="heading-gradient">Certifications & Training</span>
               </h3>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
                 {certifications.map((cert, index) => (
                   <motion.div
                     key={index}
@@ -246,14 +246,14 @@ export default function Education() {
                     animate={inView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
                     transition={{ delay: index * 0.1 }}
                     whileHover={{ y: -5 }}
-                    className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg border border-gray-100 dark:border-gray-800 card-hover"
+                    className="bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-100 dark:border-gray-800 card-hover"
                   >
                     <div className="flex items-start gap-4 mb-4">
                       <div className="p-3 rounded-lg bg-primary-100 dark:bg-primary-900/30">
                         <cert.icon className="text-primary-600 dark:text-primary-400" size={24} />
                       </div>
                       <div>
-                        <h4 className="font-bold text-lg mb-1">{cert.title}</h4>
+                        <h4 className="font-bold text-base sm:text-lg mb-1">{cert.title}</h4>
                         <p className="text-gray-600 dark:text-gray-400 text-sm">{cert.issuer}</p>
                       </div>
                     </div>
@@ -272,14 +272,14 @@ export default function Education() {
                 <h4 className="text-xl font-bold mb-6 text-center">Continuous Learning Journey</h4>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   {[
-                    { topic: 'Advanced .NET', progress: 80 },
+                    { topic: 'NodeJs', progress: 80 },
                     { topic: 'Cloud Architecture', progress: 70 },
                     { topic: 'React Ecosystem', progress: 85 },
                     { topic: 'System Design', progress: 75 },
                   ].map((item, index) => (
-                    <div key={index} className="text-center p-4">
-                      <div className="text-2xl font-bold mb-2">{item.progress}%</div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">{item.topic}</div>
+                    <div key={index} className="text-center p-3 sm:p-4">
+                      <div className="text-xl sm:text-2xl font-bold mb-2">{item.progress}%</div>
+                      <div className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">{item.topic}</div>
                     </div>
                   ))}
                 </div>

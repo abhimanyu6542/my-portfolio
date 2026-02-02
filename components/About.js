@@ -169,7 +169,7 @@ export default function About() {
             </motion.div>
 
             {/* Right Column - Qualities */}
-            <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {qualities.map((quality, index) => (
                 <motion.div
                   key={index}
@@ -179,7 +179,7 @@ export default function About() {
                   transition={{ delay: quality.delay }}
                   whileHover={{ y: -10, scale: 1.02 }}
                   className={`bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 
-                           p-6 rounded-2xl shadow-lg card-hover border border-gray-100 dark:border-gray-800`}
+                           p-4 sm:p-6 rounded-2xl shadow-lg card-hover border border-gray-100 dark:border-gray-800`}
                 >
                   <div className="flex items-start gap-4">
                     <div className={`p-3 rounded-xl bg-gradient-to-r ${quality.color} bg-opacity-10`}>
@@ -189,8 +189,8 @@ export default function About() {
                       />
                     </div>
                     <div>
-                      <h3 className="font-bold text-lg mb-2">{quality.title}</h3>
-                      <p className="text-gray-600 dark:text-gray-300 text-sm">
+                      <h3 className="font-bold text-base sm:text-lg mb-2">{quality.title}</h3>
+                      <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm">
                         {quality.description}
                       </p>
                     </div>
@@ -206,7 +206,7 @@ export default function About() {
               <h3 className="text-2xl font-bold mb-6 text-center">
                 <span className="heading-gradient">Key Strengths</span>
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
                 {[
                   {
                     title: 'Full-Stack Development',
@@ -226,11 +226,11 @@ export default function About() {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="text-center p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm"
+                    className="text-center p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-sm"
                   >
                     <div className="text-3xl mb-4">{item.icon}</div>
-                    <h4 className="font-bold text-lg mb-2">{item.title}</h4>
-                    <p className="text-gray-600 dark:text-gray-300">{item.desc}</p>
+                    <h4 className="font-bold text-base sm:text-lg mb-2">{item.title}</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm">{item.desc}</p>
                   </div>
                 ))}
               </div>

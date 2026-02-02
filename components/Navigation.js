@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sun, Moon, Home, User, Briefcase, Code, BookOpen, Mail } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import Link from 'next/link';
 
 const navItems = [
   { label: 'Home', href: '#home', icon: Home },

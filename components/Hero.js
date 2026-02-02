@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Linkedin, Download, ChevronDown } from 'lucide-react';
+import { Mail, Phone, Linkedin, ChevronDown } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 
 export default function Hero() {
@@ -30,17 +30,6 @@ export default function Hero() {
     },
   };
 
-  const floatVariants = {
-    float: {
-      y: [0, -10, 0],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        ease: 'easeInOut',
-      },
-    },
-  };
-
   const contactInfo = [
     {
       icon: Phone,
@@ -61,10 +50,6 @@ export default function Hero() {
       color: 'from-blue-600 to-indigo-600',
     },
   ];
-
-  const scrollToAbout = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section
@@ -146,7 +131,7 @@ export default function Hero() {
           {/* Contact Info Grid */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto flex-wrap lg:mx-0"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto lg:mx-0"
           >
             {contactInfo.map((info, index) => (
               <motion.div
@@ -159,18 +144,18 @@ export default function Hero() {
                   <div className={`p-2 rounded-lg bg-gradient-to-r ${info.color} bg-opacity-10`}>
                     <info.icon className={`bg-gradient-to-r ${info.color} bg-clip-text text-transparent`} size={20} />
                   </div>
-                  <div className="text-left text-wrap">
+                  <div className="text-left break-words">
                     {info.href ? (
                       <a
                         href={info.href}
                         target={info.icon === Linkedin ? '_blank' : '_self'}
                         rel="noopener noreferrer"
-                        className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors block"
+                        className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors block break-all"
                       >
                         {info.text}
                       </a>
                     ) : (
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300 break-all">
                         {info.text}
                       </span>
                     )}

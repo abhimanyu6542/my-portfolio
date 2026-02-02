@@ -25,8 +25,8 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+91 9178318091',
-      href: 'tel:+919178318091',
+      value: '+91 7504644176',
+      href: 'tel:+917504644176',
       description: 'Call or WhatsApp',
       color: 'from-green-500 to-emerald-600',
       delay: 0,
@@ -34,8 +34,8 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      value: 'pradumnadas0@gmail.com',
-      href: 'mailto:pradumnadas0@gmail.com',
+      value: 'abhimanyudebata6@gmail.com',
+      href: 'mailto:abhimanyudebata6@gmail.com',
       description: 'For business inquiries',
       color: 'from-blue-500 to-cyan-600',
       delay: 0.1,
@@ -51,8 +51,8 @@ export default function Contact() {
     {
       icon: Linkedin,
       title: 'LinkedIn',
-      value: 'pradumna-das-599858126',
-      href: 'https://linkedin.com/in/pradumna-das-599858126',
+      value: 'Abhimanyu Debata',
+      href: 'https://www.linkedin.com/in/abhimanyudebata/',
       description: 'Professional profile',
       color: 'from-indigo-500 to-purple-600',
       delay: 0.3,
@@ -177,7 +177,7 @@ export default function Contact() {
                   variants={itemVariants}
                   custom={info.delay}
                   whileHover={{ scale: 1.02, y: -2 }}
-                  className={`block p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 card-hover ${
+                  className={`block p-4 sm:p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-800 card-hover ${
                     !info.href ? 'cursor-default' : ''
                   }`}
                 >
@@ -189,10 +189,10 @@ export default function Contact() {
                       />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-bold text-lg mb-1 text-gray-900 dark:text-white">
+                      <h3 className="font-bold text-base sm:text-lg mb-1 text-gray-900 dark:text-white">
                         {info.title}
                       </h3>
-                      <p className="text-gray-700 dark:text-gray-300">{info.value}</p>
+                      <p className="text-gray-700 dark:text-gray-300 text-sm break-all">{info.value}</p>
                       <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
                         {info.description}
                       </p>
@@ -240,7 +240,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <motion.div variants={itemVariants} className="lg:col-span-2">
-              <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 border border-gray-100 dark:border-gray-800">
+              <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 sm:p-8 border border-gray-100 dark:border-gray-800">
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                   {/* Error Message */}
                   {error && (
@@ -413,10 +413,7 @@ export default function Contact() {
             className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 text-center"
           >
             <p className="text-gray-600 dark:text-gray-400">
-              © {new Date().getFullYear()} Abhimanyu Debata. All rights reserved.
-            </p>
-            <p className="text-gray-500 dark:text-gray-500 text-sm mt-2">
-              Built with ❤️ using Next.js, React, and Tailwind CSS
+              © {new Date().getFullYear()} ❤️ Abhimanyu Debata. All rights reserved.
             </p>
           </motion.div>
         </motion.div>
