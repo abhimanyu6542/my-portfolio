@@ -80,7 +80,7 @@ export default function Navigation() {
             className="flex items-center space-x-2"
           >
             <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold">PD</span>
+              <span className="text-white font-bold">AD</span>
             </div>
             <span className="font-bold text-lg hidden sm:inline-block">
               Abhimanyu Debata

@@ -13,12 +13,12 @@ export default function Experience() {
   });
 
   const experience = {
-    company: 'ASMACS Group',
-    role: 'Software Developer',
-    location: 'Mumbai, India (Remote)',
-    period: 'April 2022 - Present',
-    duration: '2 years 9 months',
-    teamSize: 6,
+    company: 'Ritswa Software Solution Pvt Ltd',
+    role: 'Full Stack Developer',
+    location: 'Assam, India (Remote)',
+    period: 'Jan 2023 - Present',
+    duration: '3 years 1 months',
+    teamSize: 4,
     projects: [
       {
         name: 'HuntsJob Platform',
@@ -208,7 +208,7 @@ export default function Experience() {
                       Primary Tech Stack
                     </h4>
                     <div className="flex flex-wrap gap-2">
-                      {['C#', '.NET', 'React', 'AWS', 'SQL'].map((tech, idx) => (
+                      {['Javascript', 'TypeScript', 'ReactJs', 'AWS', 'SQL', "NodeJs", "NestJs"].map((tech, idx) => (
                         <span
                           key={idx}
                           className="px-3 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-sm font-medium"

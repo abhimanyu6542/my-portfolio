@@ -44,25 +44,20 @@ export default function Hero() {
   const contactInfo = [
     {
       icon: Phone,
-      text: '+91 9178318091',
-      href: 'tel:+919178318091',
+      text: '+91 7504644176',
+      href: 'tel:+917504644176',
       color: 'from-green-500 to-emerald-600',
     },
     {
       icon: Mail,
-      text: 'pradumnadas0@gmail.com',
-      href: 'mailto:pradumnadas0@gmail.com',
+      text: 'abhimanyudebata6@gmail.com',
+      href: 'mailto:abhimanyudebata6@gmail.com',
       color: 'from-blue-500 to-cyan-600',
-    },
-    {
-      icon: MapPin,
-      text: 'Khordha, Odisha, 752062',
-      color: 'from-orange-500 to-red-600',
     },
     {
       icon: Linkedin,
       text: 'LinkedIn Profile',
-      href: 'https://linkedin.com/in/pradumna-das-599858126',
+      href: 'https://www.linkedin.com/in/abhimanyudebata/',
       color: 'from-blue-600 to-indigo-600',
     },
   ];
@@ -108,7 +103,7 @@ export default function Hero() {
             <span className="block">Hello, I'm</span>
             <span className="block heading-gradient">Abhimanyu Debata</span>
             <span className="block text-2xl sm:text-3xl md:text-4xl mt-4 text-gray-600 dark:text-gray-300">
-              Software Developer
+              Software Developer/Web Developer
             </span>
           </motion.h1>
 
@@ -117,11 +112,11 @@ export default function Hero() {
             variants={itemVariants}
             className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto lg:mx-0 leading-relaxed"
           >
-            Full-stack developer specializing in <span className="font-semibold text-primary-600 dark:text-primary-400">.NET</span>,{' '}
-            <span className="font-semibold text-primary-600 dark:text-primary-400">React</span>, and{' '}
+            Full-stack developer specializing in <span className="font-semibold text-primary-600 dark:text-primary-400">NodeJs</span>,{' '}
+            <span className="font-semibold text-primary-600 dark:text-primary-400">ReactJs</span>, <span className="font-semibold text-primary-600 dark:text-primary-400">NestJs</span> and{' '}
             <span className="font-semibold text-primary-600 dark:text-primary-400">AWS</span> technologies.
             Building scalable web applications with{' '}
-            <span className="font-bold">2.9+ years</span> of professional experience.
+            <span className="font-bold">3+ years</span> of professional experience.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -151,7 +146,7 @@ export default function Hero() {
           {/* Contact Info Grid */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto lg:mx-0"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto flex-wrap lg:mx-0"
           >
             {contactInfo.map((info, index) => (
               <motion.div
@@ -164,7 +159,7 @@ export default function Hero() {
                   <div className={`p-2 rounded-lg bg-gradient-to-r ${info.color} bg-opacity-10`}>
                     <info.icon className={`bg-gradient-to-r ${info.color} bg-clip-text text-transparent`} size={20} />
                   </div>
-                  <div className="text-left">
+                  <div className="text-left text-wrap">
                     {info.href ? (
                       <a
                         href={info.href}
@@ -186,24 +181,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          animate="float"
-          variants={floatVariants}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 hidden lg:block cursor-pointer"
-          onClick={scrollToAbout}
-        >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-sm text-gray-500 dark:text-gray-400">Scroll</span>
-            <div className="w-6 h-10 border-2 border-gray-300 dark:border-gray-600 rounded-full flex justify-center">
-              <motion.div
-                animate={{ y: [0, 12, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-                className="w-1 h-3 bg-gray-400 dark:bg-gray-500 rounded-full mt-2"
-              />
-            </div>
-          </div>
-        </motion.div>
+     
       </div>
     </section>
   );

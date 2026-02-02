@@ -76,9 +76,9 @@ export default function About() {
   ];
 
   const techStack = [
-    { name: 'C# & .NET', level: 95 },
-    { name: 'ASP.NET Core', level: 90 },
-    { name: 'React JS', level: 85 },
+    { name: 'ReactJs, Vite, NextJs', level: 95 },
+    { name: 'NodeJs', level: 90 },
+    { name: 'Nest JS', level: 85 },
     { name: 'SQL Server', level: 88 },
     { name: 'AWS Services', level: 80 },
     { name: 'JavaScript/TypeScript', level: 85 },
@@ -118,12 +118,12 @@ export default function About() {
                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                   With{' '}
                   <span className="font-bold text-primary-600 dark:text-primary-400">
-                    2 years 9 months
+                    3 years 1 months
                   </span>{' '}
                   of experience in the IT industry, I specialize in building robust web applications
                   using{' '}
-                  <span className="font-semibold">.NET technologies</span>. My expertise spans from
-                  backend development with ASP.NET Core Web API and SQL Server to frontend
+                  <span className="font-semibold">ReactJs technologies</span>. My expertise spans from
+                  backend development with NestJs and Lambda serverless API and SQL Server to frontend
                   development with React JS and modern JavaScript frameworks.
                 </p>
                 <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
