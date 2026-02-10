@@ -85,49 +85,78 @@ export default function Contact() {
     },
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
-    setIsSubmitting(true);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setError('');
+  setIsSubmitting(true);
 
-    // Validate form
-    if (!formData.name || !formData.email || !formData.message) {
-      setError('Please fill in all required fields');
-      setIsSubmitting(false);
-      return;
+  // Validate form
+  if (!formData.name || !formData.email || !formData.message) {
+    setError('Please fill in all required fields');
+    setIsSubmitting(false);
+    return;
+  }
+
+  if (!/\S+@\S+\.\S+/.test(formData.email)) {
+    setError('Please enter a valid email address');
+    setIsSubmitting(false);
+    return;
+  }
+
+  try {
+    // Extract data from formData
+    const { name, email, subject, message } = formData;
+    
+    const response = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer re_FgsuCrX8_C8ga5DapSHrr7bQW6EzK41b8`
+      },
+      body: JSON.stringify({
+        from: 'onboarding@resend.dev', // Replace with verified sender
+        to: 'you@example.com', // Replace with your actual email
+        subject: subject || 'New Contact Form Message', // Use subject or default
+        html: `
+          <h2>New Contact Form Submission</h2>
+          <p><strong>From:</strong> ${name} (${email})</p>
+          <p><strong>Subject:</strong> ${subject || 'No subject'}</p>
+          <p><strong>Message:</strong></p>
+          <p>${message.replace(/\n/g, '<br>')}</p>
+        `,
+        text: `Name: ${name}\nEmail: ${email}\nSubject: ${subject || 'No subject'}\nMessage: ${message}`,
+        reply_to: email
+      })
+    });
+
+    const data = await response.json();
+    
+    if (!response.ok) {
+      throw new Error(data.message || `Failed to send email: ${response.status}`);
     }
 
-    if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      setError('Please enter a valid email address');
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Simulate API call
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      // Here you would typically send to your backend
-      // await fetch('/api/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData),
-      // });
-
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      
-      // Reset form after 3 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-        setFormData({ name: '', email: '', subject: '', message: '' });
-        setError('');
-      }, 3000);
-    } catch (err) {
-      setError('Failed to send message. Please try again.');
-      setIsSubmitting(false);
-    }
-  };
+    // Success - update state
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after successful submission
+    setFormData({ name: '', email: '', subject: '', message: '' });
+    
+    // Optionally, clear the submitted state after a delay
+    setTimeout(() => {
+      setIsSubmitted(false);
+    }, 3000);
+    
+    return { success: true, data };
+    
+  } catch (err) {
+    // Error handling
+    console.error('Error sending email:', err);
+    setError(err.message || 'Failed to send message. Please try again.');
+    setIsSubmitting(false);
+    return { success: false, error: err.message };
+  }
+};
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

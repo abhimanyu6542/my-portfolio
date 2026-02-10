@@ -118,14 +118,14 @@ export default function Hero() {
               <span>Get In Touch</span>
               <ChevronDown className="group-hover:translate-y-1 transition-transform" size={20} />
             </motion.button>
-            <motion.a
+            {/* <motion.a
               href="#projects"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 rounded-full font-semibold hover:border-primary-600 dark:hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 flex items-center justify-center gap-2"
             >
               <span>View Projects</span>
-            </motion.a>
+            </motion.a> */}
           </motion.div>
 
           {/* Contact Info Grid */}

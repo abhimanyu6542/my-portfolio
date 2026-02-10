@@ -15,7 +15,7 @@ export default function Skills() {
     // Programming Languages
     { name: 'JavaScript', icon: '🟨', category: 'Language', level: 90, color: 'from-yellow-400 to-yellow-600', bgColor: 'bg-yellow-50 dark:bg-yellow-900/20' },
     { name: 'TypeScript', icon: '🔷', category: 'Language', level: 85, color: 'from-blue-400 to-blue-600', bgColor: 'bg-blue-50 dark:bg-blue-900/20' },
-    { name: 'C#', icon: '💜', category: 'Language', level: 95, color: 'from-purple-400 to-purple-600', bgColor: 'bg-purple-50 dark:bg-purple-900/20' },
+    // { name: 'C#', icon: '💜', category: 'Language', level: 95, color: 'from-purple-400 to-purple-600', bgColor: 'bg-purple-50 dark:bg-purple-900/20' },
     { name: 'HTML', icon: '🧡', category: 'Markup', level: 95, color: 'from-orange-400 to-orange-600', bgColor: 'bg-orange-50 dark:bg-orange-900/20' },
     { name: 'CSS', icon: '🔵', category: 'Styling', level: 90, color: 'from-blue-400 to-cyan-500', bgColor: 'bg-cyan-50 dark:bg-cyan-900/20' },
     
@@ -27,13 +27,13 @@ export default function Skills() {
     
     // Backend Technologies
     { name: 'NestJS', icon: '🐱', category: 'Backend', level: 82, color: 'from-red-500 to-pink-600', bgColor: 'bg-red-50 dark:bg-red-900/20' },
-    { name: 'ASP.NET Core', icon: '🔷', category: 'Backend', level: 92, color: 'from-blue-500 to-indigo-600', bgColor: 'bg-blue-50 dark:bg-blue-900/20' },
+    // { name: 'ASP.NET Core', icon: '🔷', category: 'Backend', level: 92, color: 'from-blue-500 to-indigo-600', bgColor: 'bg-blue-50 dark:bg-blue-900/20' },
     { name: 'Web API', icon: '🔗', category: 'Backend', level: 90, color: 'from-green-500 to-emerald-600', bgColor: 'bg-green-50 dark:bg-green-900/20' },
     
     // Databases
     { name: 'MongoDB', icon: '🍃', category: 'Database', level: 85, color: 'from-green-500 to-green-700', bgColor: 'bg-green-50 dark:bg-green-900/20' },
     { name: 'PostgreSQL', icon: '🐘', category: 'Database', level: 80, color: 'from-blue-600 to-indigo-700', bgColor: 'bg-blue-50 dark:bg-blue-900/20' },
-    { name: 'SQL Server', icon: '🗄️', category: 'Database', level: 90, color: 'from-red-500 to-red-700', bgColor: 'bg-red-50 dark:bg-red-900/20' },
+    // { name: 'SQL Server', icon: '🗄️', category: 'Database', level: 90, color: 'from-red-500 to-red-700', bgColor: 'bg-red-50 dark:bg-red-900/20' },
     { name: 'Supabase', icon: '⚡', category: 'Database', level: 78, color: 'from-green-400 to-emerald-600', bgColor: 'bg-emerald-50 dark:bg-emerald-900/20' },
     
     // Cloud & DevOps

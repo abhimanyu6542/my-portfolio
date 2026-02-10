@@ -10,7 +10,7 @@ const navItems = [
   { label: 'About', href: '#about', icon: User },
   { label: 'Experience', href: '#experience', icon: Briefcase },
   { label: 'Skills', href: '#skills', icon: Code },
-  { label: 'Projects', href: '#projects', icon: Code },
+  // { label: 'Projects', href: '#projects', icon: Code },
   { label: 'Education', href: '#education', icon: BookOpen },
   { label: 'Contact', href: '#contact', icon: Mail },
 ];
