@@ -245,14 +245,14 @@ export default function Skills() {
           >
             <h3 className="text-xl sm:text-2xl font-bold mb-6 flex items-center justify-center gap-2">
               <BarChart className="text-purple-600 dark:text-purple-400" />
-              Currently Learning & Goals 2024
+              Currently Learning & Goals
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { name: 'Advanced AWS Architecture', icon: '☁️', progress: 60 },
+                { name: 'Advanced AWS Architecture', icon: '☁️', progress: 30 },
                 { name: 'Microservices with NestJS', icon: '🐱', progress: 45 },
-                { name: 'Advanced TypeScript Patterns', icon: '🔷', progress: 70 },
-                { name: 'Docker & Kubernetes', icon: '🐳', progress: 30 },
+                { name: 'Advanced TypeScript Patterns', icon: '🔷', progress: 60 },
+                { name: 'Docker & Kubernetes', icon: '🐳', progress: 20 },
               ].map((goal, index) => (
                 <motion.div
                   key={index}
