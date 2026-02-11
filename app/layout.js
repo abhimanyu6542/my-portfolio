@@ -10,12 +10,12 @@ const inter = Inter({
 
 export const metadata = {
   title: 'Abhimanyu Debata | Software Developer',
-  description: 'Software Developer specializing in .NET, React, and AWS technologies with 2.9+ years of professional experience.',
-  keywords: 'software developer, .NET developer, React developer, AWS, portfolio, web developer',
+  description: 'Software Developer specializing in .NET, React, and AWS technologies with 3+ years of professional experience.',
+  keywords: 'software developer, NodeJs developer, JavaScript Developer, React developer, AWS Lambda, portfolio, web developer',
   authors: [{ name: 'Abhimanyu Debata' }],
   openGraph: {
     title: 'Abhimanyu Debata | Software Developer',
-    description: 'Portfolio showcasing projects and experience in .NET, React, and AWS',
+    description: 'Portfolio showcasing projects and experience in NextJs, Vite, NestJs, NodeJs, React, and AWS lambda',
     type: 'website',
   },
 };
